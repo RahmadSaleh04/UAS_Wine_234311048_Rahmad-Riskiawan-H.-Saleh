@@ -18,12 +18,18 @@
 
 # 2. 📄 Problem & Goals
 **Problem Statements:**  
-- [...]  
-- [...]  
+- Bagaimana membangun model machine learning yang mampu mengklasifikasikan jenis wine berdasarkan kandungan kimia dengan tingkat akurasi yang tinggi?
+- Algoritma machine learning apa yang memberikan performa terbaik pada dataset Wine untuk kasus klasifikasi multikelas?
+- Apakah penggunaan model deep learning dapat meningkatkan performa klasifikasi dibandingkan dengan model baseline dan model machine learning konvensional?
+- Fitur kimia apa saja yang paling berpengaruh dalam menentukan jenis wine?
+
 
 **Goals:**  
-- [...]  
-- [...]  
+- Membangun sistem klasifikasi wine menggunakan tiga pendekatan model, yaitu baseline model, advanced machine learning model, dan deep learning model.
+- Mencapai akurasi klasifikasi minimal di atas 80% pada data uji.
+- Membandingkan performa ketiga model berdasarkan metrik evaluasi yang relevan, seperti accuracy, precision, recall, dan F1-score.
+- Menentukan model terbaik yang dapat digunakan untuk klasifikasi jenis wine secara efektif dan reproducible.
+
 
 ---
 ## 📁 Struktur Folder
