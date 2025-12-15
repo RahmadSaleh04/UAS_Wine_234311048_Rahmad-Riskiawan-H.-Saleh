@@ -1,5 +1,5 @@
 # 📘 Judul Proyek
-*(Isi judul proyek Anda di sini)*
+*KLASIFIKASI CULTIVAR WINE MENGGUNAKAN MACHINE LEARNING PADA DATA WINE (UCI REPOSITORY)*
 
 ## 👤 Informasi
 - **Nama:** [...]  
