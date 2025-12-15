@@ -58,9 +58,9 @@ project/
 ---
 
 # 3. 📊 Dataset
-- **Sumber:** [...]  
-- **Jumlah Data:** [...]  
-- **Tipe:** [...]  
+- **Sumber:** https://archive.ics.uci.edu/dataset/109/wine
+- **Jumlah Data:** 178 sampel
+- **Tipe:** Tabular
 
 ### Fitur Utama
 | Fitur | Deskripsi |
