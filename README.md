@@ -2,7 +2,7 @@
 *KLASIFIKASI CULTIVAR WINE MENGGUNAKAN MACHINE LEARNING PADA DATA WINE (UCI REPOSITORY)*
 
 ## 👤 Informasi
-- **Nama:** [...]  
+- **Nama:** RAHMAD RISKIAWAN H. SALEH
 - **Repo:** [...]  
 - **Video:** [...]  
 
