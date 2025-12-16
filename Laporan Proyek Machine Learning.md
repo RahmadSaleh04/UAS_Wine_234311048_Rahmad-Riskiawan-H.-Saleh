@@ -16,110 +16,62 @@ KLASIFIKASI CULTIVAR WINE MENGGUNAKAN MACHINE LEARNING PADA DATA WINE (UCI REPOS
 
 ## 1. LEARNING OUTCOMES
 Pada proyek ini, mahasiswa diharapkan dapat:
-1. Memahami konteks masalah dan merumuskan problem statement secara jelas
-2. Melakukan analisis dan eksplorasi data (EDA) secara komprehensif (**OPSIONAL**)
-3. Melakukan data preparation yang sesuai dengan karakteristik dataset
-4. Mengembangkan tiga model machine learning yang terdiri dari (**WAJIB**):
-   - Model baseline
-   - Model machine learning / advanced
-   - Model deep learning (**WAJIB**)
-5. Menggunakan metrik evaluasi yang relevan dengan jenis tugas ML
-6. Melaporkan hasil eksperimen secara ilmiah dan sistematis
-7. Mengunggah seluruh kode proyek ke GitHub (**WAJIB**)
-8. Menerapkan prinsip software engineering dalam pengembangan proyek
+* Memahami perumusan *problem statement* dalam masalah klasifikasi.
+* Melakukan analisis dan eksplorasi data (*EDA*) secara komprehensif.
+* Melakukan *preprocessing dataset* dan penyesuaian fitur sesuai karakteristik data.
+* Mengembangkan tiga model *machine learning* yang terdiri dari:
+    * Model *baseline*
+    * Model *advanced*
+    * Model *deep learning* (MLP)
+* Menggunakan metrik evaluasi yang relevan untuk tugas klasifikasi multikelas.
+* Melaporkan hasil eksperimen secara ilmiah dan sistematis.
+* Mengunggah seluruh kode proyek ke GitHub (*public repository*).
+* Menerapkan prinsip *software engineering* dalam struktur proyek ML.
 
 ---
 
 ## 2. PROJECT OVERVIEW
 
 ### 2.1 Latar Belakang
-**Isi bagian ini dengan:**
-- Mengapa proyek ini penting?
-- Permasalahan umum pada domain terkait (misal: kesehatan, pendidikan, keuangan, pertanian, NLP, computer vision, dll.)
-- Manfaat proyek untuk pengguna, bisnis, atau penelitian
-- Studi literatur atau referensi ilmiah (minimal 1–2 sumber wajib)
+Industri *wine* secara tradisional menilai kualitas melalui pengujian laboratorium dan evaluasi sensorik oleh pakar. Metode manual ini bersifat subjektif dan membutuhkan waktu. Dengan kemajuan *machine learning*, analisis kimia *wine* dapat digunakan untuk memprediksi kelas *wine* secara otomatis dan akurat berdasarkan kandungan kimianya.
+
+Dataset **Wine dari UCI Machine Learning Repository** berisi 178 sampel *wine* dari tiga kelas (cultivar) berbeda, dengan masing-masing 13 karakteristik kimia. Dataset ini menjadi *benchmark* karena komposisi fiturnya yang jelas dan sifat multikelasnya.
+
+Pemanfaatan algoritma *machine learning* untuk prediksi kelas *wine* secara otomatis bermanfaat untuk:
+* Mendukung produsen *wine* dalam kontrol kualitas produk.
+* Mengurangi biaya evaluasi manual.
+* Menjadi contoh penerapan *predictive analytics* berbasis data kimia.
 
 **Contoh referensi (berformat APA/IEEE):**
 > Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning*. MIT Press.
 
-**[Jelaskan konteks dan latar belakang proyek]**
 
 ## 3. BUSINESS UNDERSTANDING / PROBLEM UNDERSTANDING
 ### 3.1 Problem Statements
-Tuliskan 2–4 pernyataan masalah yang jelas dan spesifik.
 
-**Contoh (universal):**
-1. Model perlu mampu memprediksi nilai target dengan akurasi tinggi
-2. Sistem harus dapat mengidentifikasi pola pada citra secara otomatis
-3. Dataset memiliki noise sehingga perlu preprocessing yang tepat
-4. Dibutuhkan model deep learning yang mampu belajar representasi fitur kompleks
+Permasalahan yang ingin diselesaikan dalam proyek ini adalah:
+1.  Bagaimana membangun model *machine learning* yang mampu mengklasifikasikan jenis *wine* berdasarkan kandungan kimia dengan tingkat akurasi yang tinggi?
+2.  Algoritma *machine learning* apa yang memberikan performa terbaik pada *dataset Wine* untuk kasus klasifikasi multikelas?
+3.  Apakah penggunaan model *deep learning* dapat meningkatkan performa klasifikasi dibandingkan dengan model *baseline* dan model *machine learning* konvensional?
+4.  Fitur kimia apa saja yang paling berpengaruh dalam menentukan jenis *wine*?
 
-**[Tulis problem statements Anda di sini]**
 
 ### 3.2 Goals
 
-Tujuan harus spesifik, terukur, dan selaras dengan problem statement.
-**Contoh tujuan:**
-1. Membangun model ML untuk memprediksi variabel target dengan akurasi > 80%
-2. Mengukur performa tiga pendekatan model (baseline, advanced, deep learning)
-3. Menentukan model terbaik berdasarkan metrik evaluasi yang relevan
-4. Menghasilkan sistem yang dapat bekerja secara reproducible
+Tujuan proyek:
+* Membangun sistem klasifikasi *wine* menggunakan tiga pendekatan model: *baseline model*, *advanced machine learning model*, dan *deep learning model*.
+* Mencapai akurasi klasifikasi minimal di atas **80%** pada data uji.
+* Membandingkan performa ketiga model berdasarkan metrik evaluasi yang relevan, seperti *accuracy, precision, recall*, dan *F1-score*.
+* Menentukan model terbaik yang dapat digunakan untuk klasifikasi jenis *wine* secara efektif dan *reproducible*.
 
-**[Tulis goals Anda di sini]**
 
 ### 3.3 Solution Approach
 
-Mahasiswa **WAJIB** menggunakan minimal **tiga model** dengan komposisi sebagai berikut:
-#### **Model 1 – Baseline Model**
-Model sederhana sebagai pembanding dasar.
-**Pilihan model:**
-- Linear Regression (untuk regresi)
-- Logistic Regression (untuk klasifikasi)
-- K-Nearest Neighbors (KNN)
-- Decision Tree
-- Naive Bayes
-
-**[Jelaskan model baseline yang Anda pilih dan alasannya]**
-
-#### **Model 2 – Advanced / ML Model**
-Model machine learning yang lebih kompleks.
-**Pilihan model:**
-- Random Forest
-- Gradient Boosting (XGBoost, LightGBM, CatBoost)
-- Support Vector Machine (SVM)
-- Ensemble methods
-- Clustering (K-Means, DBSCAN) - untuk unsupervised
-- PCA / dimensionality reduction (untuk preprocessing)
-
-**[Jelaskan model advanced yang Anda pilih dan alasannya]**
-
-#### **Model 3 – Deep Learning Model (WAJIB)**
-Model deep learning yang sesuai dengan jenis data.
-**Pilihan Implementasi (pilih salah satu sesuai dataset):**
-**A. Tabular Data:**
-- Multilayer Perceptron (MLP) / Neural Network
-- Minimum: 2 hidden layers
-- Contoh: prediksi harga, klasifikasi binary/multiclass
-
-**B. Image Data:**
-- CNN sederhana (minimum 2 convolutional layers) **ATAU**
-- Transfer Learning (ResNet, VGG, MobileNet, EfficientNet) - **recommended**
-- Contoh: klasifikasi gambar, object detection
-
-**C. Text Data:**
-- LSTM/GRU (minimum 1 layer) **ATAU**
-- Embedding + Dense layers **ATAU**
-- Pre-trained model (BERT, DistilBERT, Word2Vec)
-- Contoh: sentiment analysis, text classification
-
-**D. Time Series:**
-- LSTM/GRU untuk sequential prediction
-- Contoh: forecasting, anomaly detection
-
-**E. Recommender Systems:**
-- Neural Collaborative Filtering (NCF)
-- Autoencoder-based Collaborative Filtering
-- Deep Matrix Factorization
+| Model | Nama Model | Alasan Pemilihan |
+| :--- | :--- | :--- |
+| **Model 1** | **Logistic Regression** | Dipilih sebagai *baseline* karena merupakan algoritma klasifikasi linear yang sederhana, mudah diinterpretasikan, dan cocok untuk data tabular dengan fitur yang tidak terlalu besar. |
+| **Model 2** | **Random Forest Classifier** | Dipilih sebagai model lanjutan karena mampu menangani hubungan non-linear, mengurangi *overfitting* melalui mekanisme *ensemble*, dan menyediakan informasi *feature importance*. |
+| **Model 3** | **Multilayer Perceptron (MLP)** | Dipilih untuk memenuhi *requirement deep learning*. Model ini terdiri dari minimal dua *hidden layer* dan mampu mempelajari representasi fitur yang lebih kompleks, diharapkan dapat meningkatkan performa. |
 
 **Minimum Requirements untuk Deep Learning:**
 - ✅ Model harus training minimal 10 epochs
@@ -132,7 +84,6 @@ Model deep learning yang sesuai dengan jenis data.
 - ❌ Model tidak di-train (hanya define arsitektur)
 - ❌ Tidak ada evaluasi pada test set
 
-**[Jelaskan model deep learning yang Anda pilih dan alasannya]**
 
 ---
 
@@ -142,37 +93,40 @@ Model deep learning yang sesuai dengan jenis data.
 [Sebutkan sumber: Kaggle, UCI ML Repository, atau sumber lain dengan URL]
 
 **Deskripsi Dataset:**
-- Jumlah baris (rows): [angka]
-- Jumlah kolom (columns/features): [angka]
-- Tipe data: [Tabular / Image / Text / Time Series / Audio / Video]
-- Ukuran dataset: [MB/GB]
-- Format file: [CSV / JSON / Images / TXT / etc.]
-
+- Jumlah baris (rows): 178
+- Jumlah kolom (columns/features): 13 fitur + 1 target (class)
+- Tipe data: Tabular
+- Ukuran dataset: 0.02MB
+- Format file: CSV / array numerik 
 ### 4.2 Deskripsi Fitur
 Jelaskan setiap fitur/kolom yang ada dalam dataset.
-**Contoh tabel:**
-| Nama Fitur | Tipe Data | Deskripsi | Contoh Nilai |
-|------------|-----------|-----------|--------------|
-| id | Integer | ID unik data | 1, 2, 3 |
-| age | Integer | Usia (tahun) | 25, 30, 45 |
-| income | Float | Pendapatan (juta) | 5.5, 10.2 |
-| category | Categorical | Kategori produk | A, B, C |
-| text | String | Teks ulasan | "Produk bagus..." |
-| image | Image | Citra 224x224 RGB | Array 224x224x3 |
-| label | Categorical | Label target | 0, 1 atau "positif", "negatif" |
+| Nama Fitur | Tipe | Deskripsi |
+| :--- | :--- | :--- |
+| Alcohol | Float | Persentase kandungan alkohol |
+| Malic Acid | Float | Kandungan asam Malik |
+| Ash | Float | Residu hasil pembakaran dalam gram |
+| Alcalinity of Ash | Float | Tingkat alkalinitas abu |
+| Magnesium | Float | Kadar magnesium (mg/L) |
+| Total Phenols | Float | Total senyawa fenol |
+| Flavanoids | Float | Senyawa flavonoid |
+| Nonflavanoid Phenols | Float | Senyawa fenol non-flavonoid |
+| Proanthocyanins | Float | Kandungan proanthocyanins |
+| Color Intensity | Float | Intensitas warna |
+| Hue | Float | *Value* warna (*color hue*) |
+| OD280/OD315 | Float | Rasio absorbansi pada panjang gelombang 280/315 |
+| Proline | Float | Kandungan asam amino Proline |
+| **Class (Label)** | Categorical | Kelas *wine* (0, 1, 2) berdasarkan cultivar |
 
-**[Buat tabel deskripsi fitur Anda di sini]**
 
 ### 4.3 Kondisi Data
 
 Jelaskan kondisi dan permasalahan data:
 
-- **Missing Values:** [Ada/Tidak, berapa persen?]
-- **Duplicate Data:** [Ada/Tidak, berapa banyak?]
-- **Outliers:** [Ada/Tidak, pada fitur apa?]
-- **Imbalanced Data:** [Ada/Tidak, rasio kelas?]
-- **Noise:** [Jelaskan jika ada]
-- **Data Quality Issues:** [Jelaskan jika ada masalah lain]
+* **Missing Values:** Tidak ada (*0%*)
+* **Duplicate Data:** Tidak ditemukan.
+* **Outliers:** Ada indikasi *outliers* pada fitur **proline**, **color\_intensity**, dan **magnesium**, namun dianggap wajar sebagai variasi alami.
+* **Imbalanced Data:** Distribusi kelas relatif seimbang.
+* **Data Quality Issues:** Tidak ada masalah signifikan.
 
 ### 4.4 Exploratory Data Analysis (EDA) - (**OPSIONAL**)
 
@@ -194,21 +148,21 @@ Jelaskan kondisi dan permasalahan data:
 [Insert gambar/plot]
 
 **Insight:**  
-[Jelaskan apa yang dapat dipelajari dari visualisasi ini]
+* **Insight:** Dataset memiliki tiga kelas dengan jumlah sampel yang relatif seimbang, menunjukkan tidak adanya *class imbalance*.
 
 #### Visualisasi 2: [Judul Visualisasi]
 
 [Insert gambar/plot]
 
 **Insight:**  
-[Jelaskan apa yang dapat dipelajari dari visualisasi ini]
+* **Insight:** Sebagian besar data uji berhasil diklasifikasikan dengan benar, ditandai dengan nilai diagonal yang dominan (akurasi tinggi). Model memiliki kemampuan generalisasi yang baik.
 
 #### Visualisasi 3: [Judul Visualisasi]
 
 [Insert gambar/plot]
 
 **Insight:**  
-[Jelaskan apa yang dapat dipelajari dari visualisasi ini]
+* **Insight:** Terdapat pemisahan pola antar kelas *wine* berdasarkan kombinasi fitur **Alcohol** dan **Color Intensity**. Setiap kelas cenderung membentuk klaster tersendiri, menunjukkan kontribusi signifikan kedua fitur dalam klasifikasi.
 
 
 
@@ -216,100 +170,46 @@ Jelaskan kondisi dan permasalahan data:
 
 ## 5. DATA PREPARATION
 
-Bagian ini menjelaskan **semua** proses transformasi dan preprocessing data yang dilakukan.
 ### 5.1 Data Cleaning
 **Aktivitas:**
-- Handling missing values
-- Removing duplicates
-- Handling outliers
-- Data type conversion
-**Contoh:**
-```
-Missing Values:
-- Fitur 'age' memiliki 50 missing values (5% dari data)
-- Strategi: Imputasi dengan median karena distribusi skewed
-- Alasan: Median lebih robust terhadap outliers dibanding mean
-```
-
-**[Jelaskan langkah-langkah data cleaning yang Anda lakukan]**
+* **Handling Missing Values:** Tidak ada *missing values*, sehingga tidak diperlukan imputasi.
+* **Removing Duplicates:** Tidak terdapat data duplikat, semua baris unik.
+* **Handling Outliers:** *Outliers* pada **Proline**, **Color Intensity**, dan **Alcohol** **tidak dihapus** karena masih valid secara domain kimia dan model yang digunakan (*Random Forest*, *Neural Network*) relatif *robust*.
+* **Data Type Conversion:** Fitur numerik dipertahankan; *target class* dikonversi ke tipe kategorikal.
 
 
 
 ### 5.2 Feature Engineering
 **Aktivitas:**
-- Creating new features
-- Feature extraction
-- Feature selection
-- Dimensionality reduction
+* **Feature Selection:** Semua 13 fitur kimia dipertahankan karena tidak ada fitur yang redundan ekstrem dan semuanya berkontribusi terhadap klasifikasi.
+* **Dimensionality Reduction:** **PCA** hanya digunakan untuk visualisasi EDA, bukan untuk *training* model.
 
-**[Jelaskan feature engineering yang Anda lakukan]**
 
 ### 5.3 Data Transformation
 
 **Untuk Data Tabular:**
-- Encoding (Label Encoding, One-Hot Encoding, Ordinal Encoding)
-- Scaling (Standardization, Normalization, MinMaxScaler)
+* **Encoding:** *Target class* sudah numerik (0, 1, 2). Untuk *deep learning*, target akan diubah ke *one-hot encoding* saat *training*.
+* **Scaling:** Digunakan **StandardScaler** ($\text{Mean} = 0$, $\text{Standard Deviation} = 1$).
+    * **Alasan:** Logistic Regression dan MLP sensitif terhadap skala fitur, dan membantu mempercepat konvergensi *neural network*.
 
-**Untuk Data Text:**
-- Tokenization
-- Lowercasing
-- Removing punctuation/stopwords
-- Stemming/Lemmatization
-- Padding sequences
-- Word embedding (Word2Vec, GloVe, fastText)
-
-**Untuk Data Image:**
-- Resizing
-- Normalization (pixel values 0-1 atau -1 to 1)
-- Data augmentation (rotation, flip, zoom, brightness, etc.)
-- Color space conversion
-
-**Untuk Time Series:**
-- Creating time windows
-- Lag features
-- Rolling statistics
-- Differencing
-
-**[Jelaskan transformasi yang Anda lakukan]**
 
 ### 5.4 Data Splitting
 
 **Strategi pembagian data:**
-```
-- Training set: [X]% ([jumlah] samples)
-- Validation set: [X]% ([jumlah] samples) - jika ada
-- Test set: [X]% ([jumlah] samples)
-```
-**Contoh:**
-```
-Menggunakan stratified split untuk mempertahankan distribusi kelas:
-- Training: 80% (8000 samples)
-- Test: 20% (2000 samples)
-- Random state: 42 untuk reproducibility
-```
-
-**[Jelaskan strategi splitting Anda dan alasannya]**
-
+* **Strategi:** *Training set* **80%** (142 sampel), *Test set* **20%** (36 sampel).
+* Menggunakan **stratified split** untuk menjaga proporsi kelas.
 
 
 ### 5.5 Data Balancing (jika diperlukan)
-**Teknik yang digunakan:**
-- SMOTE (Synthetic Minority Over-sampling Technique)
-- Random Undersampling
-- Class weights
-- Ensemble sampling
-
-**[Jelaskan jika Anda melakukan data balancing]**
+* **Tidak diperlukan** teknik *balancing* (seperti SMOTE atau *class weights*) karena distribusi kelas dianggap tidak *imbalanced* (Class 0: 59, Class 1: 71, Class 2: 48).
 
 ### 5.6 Ringkasan Data Preparation
 
-**Per langkah, jelaskan:**
-1. **Apa** yang dilakukan
-**[Jelaskan ]**
-2. **Mengapa** penting
-**[Jelaskan Mengapa ?]**
-3. **Bagaimana** implementasinya
-**[Jelaskan Bagaimana]**
+| Langkah | Penjelasan | Apa yang Dilakukan | Mengapa Penting | Bagaimana Implementasi |
+| :--- | :--- | :--- | :--- | :--- |
+| **Pembersihan Data (*Data Cleaning*)** | Memastikan kualitas dan konsistensi data sebelum pemrosesan lebih lanjut. |  Memverifikasi tidak ada *missing values* (`NaN`).  Memastikan tidak ada data duplikat.  Mengabaikan penghapusan *outliers* karena model yang digunakan *robust*. | Data yang bersih menghasilkan model yang lebih stabil, akurat, dan memiliki kemampuan generalisasi yang baik. | Menggunakan fungsi dari **Pandas** (misalnya `df.isnull().sum()`, `df.drop_duplicates()`) dan analisis statistik. |
+| **Scaling Fitur (*Feature Scaling*)** | Menyamakan rentang nilai pada semua fitur agar tidak ada fitur yang mendominasi proses *training*. | Mengaplikasikan **StandardScaler** (Z-score normalization) pada semua 13 fitur kimia. | Model berbasis jarak dan gradien (**Logistic Regression, MLP**) sangat sensitif terhadap skala fitur. *Scaling* mempercepat konvergensi *neural network*. | Menggunakan `StandardScaler` dari **Scikit-learn** (`sklearn.preprocessing`). |
+| **Pembagian Data (*Data Splitting*)** | Memisahkan data menjadi set pelatihan dan set pengujian untuk evaluasi performa model yang tidak bias (*unseen data*). | Membagi data menjadi 80% untuk *Training Set* dan 20% untuk *Test Set*. Menggunakan metode **stratified** untuk menjaga proporsi kelas. | Menilai kemampuan generalisasi model secara akurat. Pembagian *stratified* menjaga distribusi kelas tetap seimbang di setiap set data. | Menggunakan fungsi `train_test_split` dari **Scikit-learn** (`sklearn.model_selection`). |
 
 ---
 
@@ -317,29 +217,53 @@ Menggunakan stratified split untuk mempertahankan distribusi kelas:
 ### 6.1 Model 1 — Baseline Model
 #### 6.1.1 Deskripsi Model
 
-**Nama Model:** [Nama model, misal: Logistic Regression]
+**Nama Model:** Logistic Regression
 **Teori Singkat:**  
-[Jelaskan secara singkat bagaimana model ini bekerja]
+ Logistic Regression merupakan model klasifikasi linear yang memodelkan probabilitas suatu kelas menggunakan fungsi logistik (sigmoid/softmax). Untuk kasus multikelas, digunakan pendekatan one-vs-rest atau multinomial.
+ 
 **Alasan Pemilihan:**  
-[Mengapa memilih model ini sebagai baseline?]
+Model ini dipilih sebagai baseline karena:
+- Sederhana dan mudah diinterpretasikan
+- Memberikan gambaran performa awal dataset
+- Sering digunakan sebagai pembanding awal dalam studi klasifikasi
+
 
 #### 6.1.2 Hyperparameter
 **Parameter yang digunakan:**
 ```
-[Tuliskan parameter penting, contoh:]
-- C (regularization): 1.0
-- solver: 'lbfgs'
-- max_iter: 100
+max_iter: 500
+solver: lbfgs
+multi_class: auto
 ```
 
 #### 6.1.3 Implementasi (Ringkas)
 ```python
-# Contoh kode (opsional, bisa dipindah ke GitHub)
-from sklearn.linear_model import LogisticRegression
+import joblib
+import os
 
-model_baseline = LogisticRegression(C=1.0, max_iter=100)
-model_baseline.fit(X_train, y_train)
-y_pred_baseline = model_baseline.predict(X_test)
+
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report
+
+
+model_lr = LogisticRegression(max_iter=500)
+model_lr.fit(X_train, y_train)
+
+
+y_pred_lr = model_lr.predict(X_test)
+
+
+print("Accuracy Logistic Regression:", accuracy_score(y_test, y_pred_lr))
+print(classification_report(y_test, y_pred_lr))
+
+
+# Create the 'models' directory if it doesn't exist
+if not os.path.exists('models'):
+    os.makedirs('models')
+
+
+joblib.dump(model_lr, 'models/logistic_regression_wine.pkl')
+loaded_lr = joblib.load('models/logistic_regression_wine.pkl')
 ```
 
 #### 6.1.4 Hasil Awal
@@ -351,28 +275,32 @@ y_pred_baseline = model_baseline.predict(X_test)
 ### 6.2 Model 2 — ML / Advanced Model
 #### 6.2.1 Deskripsi Model
 
-**Nama Model:** [Nama model, misal: Random Forest / XGBoost]
+**Nama Model:**  Random Forest 
 **Teori Singkat:**  
-[Jelaskan bagaimana algoritma ini bekerja]
+ Random Forest adalah metode ensemble berbasis decision tree yang membangun banyak pohon keputusan dan menggabungkan hasil prediksi melalui voting mayoritas. Model ini mampu menangkap hubungan non-linear dan mengurangi overfitting.
 
 **Alasan Pemilihan:**  
-[Mengapa memilih model ini?]
+- Sangat efektif untuk data tabular Tidak sensitif terhadap outliers
+- Menyediakan feature importance
+
 
 **Keunggulan:**
-- [Sebutkan keunggulan]
+- Akurasi tinggi
+- Robust terhadap noise
+
 
 **Kelemahan:**
-- [Sebutkan kelemahan]
+- Waktu training lebih lama dibanding model linear
+- Kurang interpretatif dibanding Logistic Regression
+
 
 #### 6.2.2 Hyperparameter
 
 **Parameter yang digunakan:**
 ```
-[Tuliskan parameter penting, contoh:]
-- n_estimators: 100
-- max_depth: 10
-- learning_rate: 0.1
-- min_samples_split: 2
+n_estimators: 150
+max_depth: None
+random_state: 42
 ```
 
 **Hyperparameter Tuning (jika dilakukan):**
@@ -381,16 +309,26 @@ y_pred_baseline = model_baseline.predict(X_test)
 
 #### 6.2.3 Implementasi (Ringkas)
 ```python
-# Contoh kode
 from sklearn.ensemble import RandomForestClassifier
 
-model_advanced = RandomForestClassifier(
-    n_estimators=100,
-    max_depth=10,
+
+model_rf = RandomForestClassifier(
+    n_estimators=150,
     random_state=42
 )
-model_advanced.fit(X_train, y_train)
-y_pred_advanced = model_advanced.predict(X_test)
+
+
+model_rf.fit(X_train, y_train)
+y_pred_rf = model_rf.predict(X_test)
+
+
+print("Accuracy Random Forest:", accuracy_score(y_test, y_pred_rf))
+print(classification_report(y_test, y_pred_rf))
+
+
+joblib.dump(model_rf, 'models/random_forest_wine.pkl')
+loaded_rf = joblib.load('models/random_forest_wine.pkl')
+
 ```
 
 #### 6.2.4 Hasil Model
@@ -406,7 +344,7 @@ y_pred_advanced = model_advanced.predict(X_test)
 **Nama Model:** [Nama arsitektur, misal: CNN / LSTM / MLP]
 
 ** (Centang) Jenis Deep Learning: **
-- [ ] Multilayer Perceptron (MLP) - untuk tabular
+- [✔] Multilayer Perceptron (MLP) - untuk tabular
 - [ ] Convolutional Neural Network (CNN) - untuk image
 - [ ] Recurrent Neural Network (LSTM/GRU) - untuk sequential/text
 - [ ] Transfer Learning - untuk image
@@ -415,25 +353,26 @@ y_pred_advanced = model_advanced.predict(X_test)
 - [ ] Neural Collaborative Filtering - untuk recommender
 
 **Alasan Pemilihan:**  
-[Mengapa arsitektur ini cocok untuk dataset Anda?]
+- Cocok untuk data tabular numerik
+- Mampu mempelajari representasi fitur kompleks
+- Memenuhi requirement deep learning UAS
+
 
 #### 6.3.2 Arsitektur Model
 
 **Deskripsi Layer:**
 
-[Jelaskan arsitektur secara detail atau buat tabel]
-
-**Contoh:**
 ```
-1. Input Layer: shape (224, 224, 3)
-2. Conv2D: 32 filters, kernel (3,3), activation='relu'
-3. MaxPooling2D: pool size (2,2)
-4. Conv2D: 64 filters, kernel (3,3), activation='relu'
-5. MaxPooling2D: pool size (2,2)
-6. Flatten
-7. Dense: 128 units, activation='relu'
-8. Dropout: 0.5
-9. Dense: 10 units, activation='softmax'
+
+| Layer | Deskripsi |
+| :--- | :--- |
+| **Input** | 13 fitur |
+| **Dense 1** | 128 neuron, **ReLU**. |
+| **Dropout** | 0.3 |
+| **Dense 2** | 64 neuron, **ReLU**. |
+| **Dropout** | 0.3 |
+| **Output** | 3 neuron, **Softmax** |
+
 
 Total parameters: [jumlah]
 Trainable parameters: [jumlah]
@@ -441,62 +380,98 @@ Trainable parameters: [jumlah]
 
 #### 6.3.3 Input & Preprocessing Khusus
 
-**Input shape:** [Sebutkan dimensi input]  
-**Preprocessing khusus untuk DL:**
-- [Sebutkan preprocessing khusus seperti normalisasi, augmentasi, dll.]
+**Input shape:** 
+- Input shape: (13,)
+- Target: One-hot encoding
+- Fitur telah melalui StandardScaler
+
 
 #### 6.3.4 Hyperparameter
 
 **Training Configuration:**
 ```
-- Optimizer: Adam / SGD / RMSprop
-- Learning rate: [nilai]
-- Loss function: [categorical_crossentropy / mse / binary_crossentropy / etc.]
-- Metrics: [accuracy / mae / etc.]
-- Batch size: [nilai]
-- Epochs: [nilai]
-- Validation split: [nilai] atau menggunakan validation set terpisah
-- Callbacks: [EarlyStopping, ModelCheckpoint, ReduceLROnPlateau, etc.]
+Optimizer: Adam
+Learning rate: default
+Loss function: categorical_crossentropy
+Metrics: accuracy
+Batch size: 16
+Epochs: 50 
+Validation split: 20%
 ```
 
 #### 6.3.5 Implementasi (Ringkas)
 
 **Framework:** TensorFlow/Keras / PyTorch
 ```python
-# Contoh kode TensorFlow/Keras
 import tensorflow as tf
-from tensorflow import keras
+from tensorflow.keras.utils import to_categorical
+from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.layers import Dense, Dropout, Input
+from tensorflow.keras.callbacks import EarlyStopping
 
-model_dl = keras.Sequential([
-    keras.layers.Dense(128, activation='relu', input_shape=(input_dim,)),
-    keras.layers.Dropout(0.3),
-    keras.layers.Dense(64, activation='relu'),
-    keras.layers.Dropout(0.3),
-    keras.layers.Dense(num_classes, activation='softmax')
+
+# (Opsional) Matikan warning TensorFlow
+tf.get_logger().setLevel('ERROR')
+
+
+# One-hot encoding
+y_train_cat = to_categorical(y_train)
+y_test_cat = to_categorical(y_test)
+
+
+# Model
+model_dl = Sequential([
+    Input(shape=(X_train.shape[1],)),   # <-- FIX: gunakan Input layer
+    Dense(128, activation='relu'),
+    Dropout(0.3),
+    Dense(64, activation='relu'),
+    Dropout(0.3),
+    Dense(3, activation='softmax')
 ])
 
+
+# Compile
 model_dl.compile(
     optimizer='adam',
     loss='categorical_crossentropy',
     metrics=['accuracy']
 )
 
+
+# Early stopping
+early_stop = EarlyStopping(
+    patience=10,
+    restore_best_weights=True
+)
+
+
+# Training
 history = model_dl.fit(
-    X_train, y_train,
+    X_train, y_train_cat,
     validation_split=0.2,
     epochs=50,
-    batch_size=32,
-    callbacks=[early_stopping]
+    batch_size=16,
+    callbacks=[early_stop],
+    verbose=1
 )
+
+
+# Save model
+model_dl.save('models/wine_mlp_model.keras')
+
+
+# Load model
+model_dl = load_model('models/wine_mlp_model.keras')
+
 ```
 
 #### 6.3.6 Training Process
 
 **Training Time:**  
-[Sebutkan waktu training total, misal: 15 menit]
+10.4 detik
 
 **Computational Resource:**  
-[CPU / GPU, platform: Local / Google Colab / Kaggle]
+CPU / GPU, Google Colab
 
 **Training History Visualization:**
 
@@ -507,9 +482,12 @@ history = model_dl.fit(
 2. **Training & Validation Accuracy/Metric** per epoch
 
 **Analisis Training:**
-- Apakah model mengalami overfitting? [Ya/Tidak, jelaskan]
-- Apakah model sudah converge? [Ya/Tidak, jelaskan]
-- Apakah perlu lebih banyak epoch? [Ya/Tidak, jelaskan]
+- Apakah model mengalami overfitting? **Tidak**
+  *  Berdasarkan grafik training loss dan validation loss, keduanya menunjukkan pola penurunan yang stabil dan tidak terjadi divergensi yang tajam antara nilai training dan validation. Selain itu, penggunaan teknik Dropout dan Early Stopping membantu mencegah model mempelajari noise secara berlebihan. Perbedaan nilai akurasi antara data training dan validation relatif kecil, sehingga dapat disimpulkan bahwa model tidak mengalami overfitting yang signifikan.
+- Apakah model sudah converge? **Ya**
+  *  Model menunjukkan kondisi convergence karena nilai loss pada data training dan validation telah mencapai titik stabil dan tidak mengalami penurunan yang signifikan pada epoch-epoch terakhir. Selain itu, mekanisme Early Stopping menghentikan proses training secara otomatis ketika performa validasi tidak lagi meningkat, yang menandakan bahwa model telah mencapai performa optimal.
+- Apakah perlu lebih banyak epoch? **Tidak**
+  * Penambahan jumlah epoch tidak diperlukan karena model telah mencapai kondisi konvergen sebelum mencapai batas maksimum epoch yang ditentukan. Menambah epoch justru berpotensi meningkatkan risiko overfitting tanpa memberikan peningkatan performa yang berarti pada data uji.
 
 #### 6.3.7 Model Summary
 ```
@@ -522,47 +500,12 @@ history = model_dl.fit(
 
 ### 7.1 Metrik Evaluasi
 
-**Pilih metrik yang sesuai dengan jenis tugas:**
-
-#### **Untuk Klasifikasi:**
-- **Accuracy**: Proporsi prediksi yang benar
-- **Precision**: TP / (TP + FP)
-- **Recall**: TP / (TP + FN)
-- **F1-Score**: Harmonic mean dari precision dan recall
-- **ROC-AUC**: Area under ROC curve
-- **Confusion Matrix**: Visualisasi prediksi
-
-#### **Untuk Regresi:**
-- **MSE (Mean Squared Error)**: Rata-rata kuadrat error
-- **RMSE (Root Mean Squared Error)**: Akar dari MSE
-- **MAE (Mean Absolute Error)**: Rata-rata absolute error
-- **R² Score**: Koefisien determinasi
-- **MAPE (Mean Absolute Percentage Error)**: Error dalam persentase
-
-#### **Untuk NLP (Text Classification):**
-- **Accuracy**
-- **F1-Score** (terutama untuk imbalanced data)
-- **Precision & Recall**
-- **Perplexity** (untuk language models)
-
-#### **Untuk Computer Vision:**
-- **Accuracy**
-- **IoU (Intersection over Union)** - untuk object detection/segmentation
-- **Dice Coefficient** - untuk segmentation
-- **mAP (mean Average Precision)** - untuk object detection
-
-#### **Untuk Clustering:**
-- **Silhouette Score**
-- **Davies-Bouldin Index**
-- **Calinski-Harabasz Index**
-
-#### **Untuk Recommender System:**
-- **RMSE**
-- **Precision@K**
-- **Recall@K**
-- **NDCG (Normalized Discounted Cumulative Gain)**
-
-**[Pilih dan jelaskan metrik yang Anda gunakan]**
+Metrik yang digunakan untuk klasifikasi multikelas dengan distribusi kelas yang seimbang:
+* **Accuracy**
+* **Precision**
+* **Recall**
+* **F1-Score**
+* **Confusion Matrix**
 
 ### 7.2 Hasil Evaluasi Model
 
@@ -570,11 +513,12 @@ history = model_dl.fit(
 
 **Metrik:**
 ```
-[Tuliskan hasil metrik, contoh:]
-- Accuracy: 0.75
-- Precision: 0.73
-- Recall: 0.76
-- F1-Score: 0.74
+Metrik:
+Accuracy : 0.97
+Precision: 0.97
+Recall   : 0.96
+F1-Score : 0.97
+
 ```
 
 **Confusion Matrix / Visualization:**  
