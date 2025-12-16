@@ -48,9 +48,18 @@ project/
 │   ├── random_forest_wine.pkl
 │   └── wine_mlp_model.keras
 ├── images/                 # Visualizations
-│   └── images/Screenshot 2025-12-14 231109.png
-
-│
+│   ├── images/Screenshot 2025-12-14 231109.png
+│   ├── images/Screenshot 2025-12-14 231215.png
+│   ├── images/Screenshot 2025-12-14 231258.png
+│   ├── images/Screenshot 2025-12-14 235918.png
+│   ├── images/Screenshot 2025-12-15 000042.png
+│   ├── images/Screenshot 2025-12-15 000938.png
+│   ├── images/Screenshot 2025-12-15 002012.png
+│   ├── images/Screenshot 2025-12-15 002034.png
+│   ├── images/Screenshot 2025-12-15 002328.png
+│   ├── images/Screenshot 2025-12-15 002417.png
+│   ├── images/Screenshot 2025-12-15 002604.png
+│   └── images/Screenshot 2025-12-15 002843.png
 ├── requirements.txt        # Dependencies
 ├── .gitignore
 └── README.md
