@@ -1,14 +1,14 @@
 ## INFORMASI PROYEK
 
 **Judul Proyek:**  
-[(Contoh: "Klasifikasi Penyakit Daun Menggunakan CNN", "Prediksi Harga Rumah dengan Machine Learning", "Analisis Sentimen Ulasan Produk")]
+KLASIFIKASI CULTIVAR WINE MENGGUNAKAN MACHINE LEARNING PADA DATA WINE (UCI REPOSITORY)
 
-**Nama Mahasiswa:** [Nama Lengkap]  
-**NIM:** [Nomor Induk Mahasiswa]  
-**Program Studi:** [Teknologi Informasi / Rekayasa Perangkat Lunak]  
-**Mata Kuliah:** [Nama Mata Kuliah]  
-**Dosen Pengampu:** [Nama Dosen]  
-**Tahun Akademik:** [Tahun/Semester]
+**Nama Mahasiswa:** RAHMAD RISKIAWAN H, SALEH
+**NIM:** 234311048
+**Program Studi:** Rekayasa Perangkat Lunak 
+**Mata Kuliah:** Data Science 
+**Dosen Pengampu:** Gus Nanang Syaifuddiin, S.Kom., M.Kom. 
+**Tahun Akademik:** 2025/Semester 5
 **Link GitHub Repository:** [URL Repository]
 **Link Video Pembahasan:** [URL Repository]
 
