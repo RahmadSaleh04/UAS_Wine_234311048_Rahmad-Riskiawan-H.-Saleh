@@ -10,7 +10,7 @@ KLASIFIKASI CULTIVAR WINE MENGGUNAKAN MACHINE LEARNING PADA DATA WINE (UCI REPOS
 * **Dosen Pengampu:** Gus Nanang Syaifuddiin, S.Kom., M.Kom.
 * **Tahun Akademik:** 2025/Semester 5
 * **Link GitHub Repository:** https://github.com/RahmadSaleh04/UAS_Wine_234311048_Rahmad-Riskiawan-H.-Saleh.git
-* **Link Video Pembahasan:** [URL Repository]
+* **Link Video Pembahasan:** https://youtu.be/5BOuI0lN0iA
 
 ---
 
