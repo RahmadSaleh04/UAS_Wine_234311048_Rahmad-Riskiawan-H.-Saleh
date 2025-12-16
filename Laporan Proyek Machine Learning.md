@@ -90,7 +90,6 @@ Tujuan proyek:
 ## 4. DATA UNDERSTANDING
 ### 4.1 Informasi Dataset
 **Sumber Dataset:**  
-[Sebutkan sumber: Kaggle, UCI ML Repository, atau sumber lain dengan URL]
 
 **Deskripsi Dataset:**
 - Jumlah baris (rows): 178
@@ -144,22 +143,21 @@ Jelaskan kondisi dan permasalahan data:
 - Class distribution plot
 
 
-#### Visualisasi 1: [Judul Visualisasi]
-[Insert gambar/plot]
+#### Visualisasi 1: Distribusi Kelas Wine
+<img width="700" height="562" alt="Screenshot 2025-12-14 231109" src="https://github.com/user-attachments/assets/5c0173be-592c-4227-a7e0-76b97dc29d6a" />
+
 
 **Insight:**  
 * **Insight:** Dataset memiliki tiga kelas dengan jumlah sampel yang relatif seimbang, menunjukkan tidak adanya *class imbalance*.
 
-#### Visualisasi 2: [Judul Visualisasi]
-
-[Insert gambar/plot]
+#### Visualisasi 2: Model Random Forest
+<img width="492" height="427" alt="Screenshot 2025-12-15 002417" src="https://github.com/user-attachments/assets/287f74fc-fd6a-42f6-86a2-65c44363c36a" />
 
 **Insight:**  
 * **Insight:** Sebagian besar data uji berhasil diklasifikasikan dengan benar, ditandai dengan nilai diagonal yang dominan (akurasi tinggi). Model memiliki kemampuan generalisasi yang baik.
 
-#### Visualisasi 3: [Judul Visualisasi]
-
-[Insert gambar/plot]
+#### Visualisasi 3: Hubungan antara Alcohol dan Color Intensity
+<img width="723" height="564" alt="Screenshot 2025-12-14 231258" src="https://github.com/user-attachments/assets/8b4fd1e7-2698-46d1-b3dd-6ab28d64e9d3" />
 
 **Insight:**  
 * **Insight:** Terdapat pemisahan pola antar kelas *wine* berdasarkan kombinasi fitur **Alcohol** dan **Color Intensity**. Setiap kelas cenderung membentuk klaster tersendiri, menunjukkan kontribusi signifikan kedua fitur dalam klasifikasi.
@@ -267,8 +265,8 @@ loaded_lr = joblib.load('models/logistic_regression_wine.pkl')
 ```
 
 #### 6.1.4 Hasil Awal
+<img width="436" height="187" alt="Screenshot 2025-12-15 002012" src="https://github.com/user-attachments/assets/68a8015c-0bc9-4652-811c-3c5ce5ea49e7" />
 
-**[Tuliskan hasil evaluasi awal, akan dijelaskan detail di Section 7]**
 
 ---
 
@@ -332,8 +330,8 @@ loaded_rf = joblib.load('models/random_forest_wine.pkl')
 ```
 
 #### 6.2.4 Hasil Model
+<img width="433" height="182" alt="Screenshot 2025-12-15 002034" src="https://github.com/user-attachments/assets/95c4a9d2-ac03-4c03-a430-4e99857c5ab3" />
 
-**[Tuliskan hasil evaluasi, akan dijelaskan detail di Section 7]**
 
 ---
 
@@ -474,12 +472,10 @@ model_dl = load_model('models/wine_mlp_model.keras')
 CPU / GPU, Google Colab
 
 **Training History Visualization:**
+<img width="1155" height="674" alt="Screenshot 2025-12-14 235918" src="https://github.com/user-attachments/assets/09b08a83-078d-4531-9d2d-6006a511071f" />
+<img width="340" height="542" alt="Screenshot 2025-12-15 000042" src="https://github.com/user-attachments/assets/553d8594-c23e-45af-8e42-de04516c8acf" />
 
-[Insert plot loss dan accuracy/metric per epoch]
 
-**Contoh visualisasi yang WAJIB:**
-1. **Training & Validation Loss** per epoch
-2. **Training & Validation Accuracy/Metric** per epoch
 
 **Analisis Training:**
 - Apakah model mengalami overfitting? **Tidak**
@@ -490,9 +486,8 @@ CPU / GPU, Google Colab
   * Penambahan jumlah epoch tidak diperlukan karena model telah mencapai kondisi konvergen sebelum mencapai batas maksimum epoch yang ditentukan. Menambah epoch justru berpotensi meningkatkan risiko overfitting tanpa memberikan peningkatan performa yang berarti pada data uji.
 
 #### 6.3.7 Model Summary
-```
-[Paste model.summary() output atau rangkuman arsitektur]
-```
+<img width="555" height="273" alt="Screenshot 2025-12-15 000938" src="https://github.com/user-attachments/assets/7f14f1ca-bf18-49f8-a14a-520151b9ecba" />
+
 
 ---
 
@@ -522,7 +517,8 @@ F1-Score : 0.97
 ```
 
 **Confusion Matrix / Visualization:**  
-[Insert gambar jika ada]
+<img width="493" height="419" alt="Screenshot 2025-12-15 002328" src="https://github.com/user-attachments/assets/e188327e-98c7-4316-b520-d9e660dfc5f7" />
+
 
 #### 7.2.2 Model 2 (Advanced/ML)
 
@@ -535,7 +531,8 @@ F1-Score : 0.97
 ```
 
 **Confusion Matrix / Visualization:**  
-[Insert gambar jika ada]
+<img width="492" height="427" alt="Screenshot 2025-12-15 002417" src="https://github.com/user-attachments/assets/c67c8ebc-28c9-435e-9a04-74bcc2507cd7" />
+
 
 **Feature Importance (jika applicable):**  
 [Insert plot feature importance untuk tree-based models]
@@ -551,10 +548,12 @@ F1-Score : 0.97
 ```
 
 **Confusion Matrix / Visualization:**  
-[Insert gambar jika ada]
+<img width="498" height="419" alt="Screenshot 2025-12-15 002604" src="https://github.com/user-attachments/assets/a8ea6c2f-e71f-4084-91ef-c94ff282ca83" />
+
 
 **Training History:**  
-[Sudah diinsert di Section 6.3.6]
+<img width="1155" height="674" alt="Screenshot 2025-12-14 235918" src="https://github.com/user-attachments/assets/09b08a83-078d-4531-9d2d-6006a511071f" />
+<img width="340" height="542" alt="Screenshot 2025-12-15 000042" src="https://github.com/user-attachments/assets/553d8594-c23e-45af-8e42-de04516c8acf" />
 
 **Test Set Predictions:**  
 [Opsional: tampilkan beberapa contoh prediksi]
@@ -577,19 +576,23 @@ F1-Score : 0.97
 **Interpretasi:**
 
 1. **Model Terbaik:**  
-   [Sebutkan model mana yang terbaik dan mengapa]
+   Model Random Forest memberikan performa terbaik berdasarkan seluruh metrik evaluasi. Hal ini disebabkan kemampuannya dalam menangkap pola non-linear pada data tabular.
 
 2. **Perbandingan dengan Baseline:**  
-   [Jelaskan peningkatan performa dari baseline ke model lainnya]
-
+   Terjadi peningkatan akurasi dari Logistic Regression ke Random Forest dan MLP, menunjukkan bahwa model yang lebih kompleks mampu mempelajari pola data dengan lebih baik.
 3. **Trade-off:**  
-   [Jelaskan trade-off antara performa vs kompleksitas vs waktu training]
+   - Logistic Regression: cepat dan sederhana, namun kurang fleksibel
+   - Random Forest: akurasi tinggi dengan kompleksitas sedang
+   - MLP: fleksibel dan powerful, tetapi membutuhkan waktu training lebih lama
 
 4. **Error Analysis:**  
-   [Jelaskan jenis kesalahan yang sering terjadi, kasus yang sulit diprediksi]
+   Kesalahan prediksi umumnya terjadi pada sampel dengan karakteristik yang berada di batas antar kelas.
 
 5. **Overfitting/Underfitting:**  
-   [Analisis apakah model mengalami overfitting atau underfitting]
+   - Logistic Regression: cenderung underfitting ringan
+   - Random Forest: generalisasi sangat baik
+   - MLP: tidak menunjukkan overfitting signifikan berkat penggunaan dropout dan early stopping
+
 
 ---
 
@@ -598,32 +601,54 @@ F1-Score : 0.97
 ### 8.1 Kesimpulan Utama
 
 **Model Terbaik:**  
-[Sebutkan model terbaik berdasarkan evaluasi]
+Berdasarkan hasil evaluasi yang telah dilakukan, Random Forest Classifier merupakan model dengan performa terbaik dalam proyek ini.
 
 **Alasan:**  
-[Jelaskan mengapa model tersebut lebih unggul]
+Random Forest menunjukkan nilai accuracy, precision, recall, dan F1-score tertinggi dibandingkan model lainnya. Keunggulan ini disebabkan oleh kemampuan Random Forest dalam:
+- Menangkap hubungan non-linear antar fitur kimia wine
+- Mengurangi overfitting melalui mekanisme ensemble
+- Menangani data tabular numerik secara efektif
+
+- Dibandingkan Logistic Regression yang bersifat linear dan MLP yang membutuhkan data lebih besar untuk performa optimal, Random Forest memberikan keseimbangan terbaik antara akurasi, stabilitas, dan kompleksitas model.
+
 
 **Pencapaian Goals:**  
-[Apakah goals di Section 3.2 tercapai? Jelaskan]
+Seluruh tujuan yang ditetapkan pada Section 3.2 (Goals) telah tercapai, yaitu:
+- Berhasil membangun dan mengevaluasi tiga model machine learning (baseline, advanced, dan deep learning)
+- Mencapai akurasi klasifikasi di atas target minimum (≥ 85%)
+- Menentukan model terbaik berdasarkan metrik evaluasi yang relevan
+- Menghasilkan sistem klasifikasi yang reproducible dan terdokumentasi dengan baik
+
 
 ### 8.2 Key Insights
 
 **Insight dari Data:**
-- [Insight 1]
-- [Insight 2]
-- [Insight 3]
+- Dataset Wine memiliki kualitas data yang sangat baik, tanpa missing values dan duplikasi, sehingga preprocessing dapat difokuskan pada scaling dan splitting data.
+- Beberapa fitur kimia seperti Flavanoids, Color Intensity, dan Proline memiliki pengaruh besar terhadap klasifikasi jenis wine.
+- Distribusi kelas yang relatif seimbang memungkinkan penggunaan metrik evaluasi standar tanpa perlu teknik data balancing.
+
 
 **Insight dari Modeling:**
-- [Insight 1]
-- [Insight 2]
+- Model machine learning berbasis ensemble seperti Random Forest sangat efektif untuk data tabular berukuran kecil hingga menengah.
+- Deep learning (MLP) mampu memberikan performa yang kompetitif, namun tidak selalu mengungguli model klasik pada dataset tabular berukuran kecil.
+- Penggunaan preprocessing yang tepat (scaling dan stratified split) berkontribusi signifikan terhadap kestabilan dan performa model.
 
 ### 8.3 Kontribusi Proyek
 
 **Manfaat praktis:**  
-[Jelaskan bagaimana proyek ini dapat digunakan di dunia nyata]
+Proyek ini dapat dimanfaatkan sebagai:
+- Sistem pendukung keputusan dalam klasifikasi jenis wine berdasarkan karakteristik kimia
+- Referensi awal bagi industri makanan dan minuman untuk menerapkan machine learning dalam kontrol kualitas
+- Studi kasus pembelajaran klasifikasi multikelas pada data tabular
+
 
 **Pembelajaran yang didapat:**  
-[Jelaskan apa yang Anda pelajari dari proyek ini]
+Melalui proyek ini, diperoleh beberapa pembelajaran penting, antara lain:
+- Pemahaman menyeluruh mengenai alur kerja proyek machine learning dari data preparation hingga evaluasi
+- Pengalaman membandingkan performa model klasik, advanced, dan deep learning
+- Pemahaman bahwa pemilihan model harus disesuaikan dengan karakteristik data, bukan hanya tingkat kompleksitas algoritma
+- Penerapan prinsip reproducibility dan dokumentasi kode melalui GitHub
+
 
 ---
 
