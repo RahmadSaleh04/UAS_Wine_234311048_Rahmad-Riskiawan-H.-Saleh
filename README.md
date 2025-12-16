@@ -3,7 +3,7 @@
 
 ## 👤 Informasi
 - **Nama:** RAHMAD RISKIAWAN H. SALEH
-- **Repo:** (https://github.com/RahmadSaleh04/UAS_Wine_234311048_Rahmad-Riskiawan-H.-Saleh/tree/main)
+- **Repo:** (https://github.com/RahmadSaleh04/UAS_Wine_234311048_Rahmad-Riskiawan-H.-Saleh.git)
 - **Video:** [...]  
 
 ---
