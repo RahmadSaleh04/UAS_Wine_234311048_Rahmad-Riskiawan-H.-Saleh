@@ -4,7 +4,7 @@
 ## 👤 Informasi
 - **Nama:** RAHMAD RISKIAWAN H. SALEH
 - **Repo:** (https://github.com/RahmadSaleh04/UAS_Wine_234311048_Rahmad-Riskiawan-H.-Saleh.git)
-- **Video:** [...]  
+- **Video:** (https://youtu.be/5BOuI0lN0iA)  
 
 ---
 
