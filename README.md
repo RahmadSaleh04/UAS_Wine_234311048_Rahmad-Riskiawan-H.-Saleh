@@ -39,17 +39,17 @@ project/
 ├── data/                   # Dataset (tidak di-commit, download manual)
 │
 ├── notebooks/              # Jupyter notebooks
-│   └── ML_Project.ipynb
+│   └── UAS_DataScience_234311048_Rahmad_Riskiawan_H_Saleh.ipynb
 │
 ├── src/                    # Source code
 │   
 ├── models/                 # Saved models
-│   ├── model_baseline.pkl
-│   ├── model_rf.pkl
-│   └── model_cnn.h5
-│
+│   ├── logistic_regression_wine.pkl
+│   ├── random_forest_wine.pkl
+│   └── wine_mlp_model.keras
 ├── images/                 # Visualizations
-│   └── r
+│   └── images/Screenshot 2025-12-14 231109.png
+
 │
 ├── requirements.txt        # Dependencies
 ├── .gitignore
